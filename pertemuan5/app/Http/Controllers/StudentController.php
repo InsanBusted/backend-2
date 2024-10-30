@@ -39,6 +39,25 @@ class StudentController extends Controller
 
     }
 
+    public function detail($id) {
+        $student = StudentModel::find($id);
+
+        if ($student) {
+            $response = [
+                'message' => 'Detail Students id = ' . $id,
+                'data'=> $student
+            ];
+
+            return response()->json($response, 200);
+        } else {
+            $response = [
+                'message' => 'Detail Students Not Found id = ' . $id
+            ];
+            return response()->json($response, 404);
+        }
+        
+    }
+
     public function update(Request $request, $id) {
         $student = StudentModel::find($id);
 
@@ -60,7 +79,7 @@ class StudentController extends Controller
     public function delete($id) {
         $student = StudentModel::find($id);
 
-            $student->delete();
+        $student->delete();
 
         $response = [
             "message"=> "Success  Students Data",
@@ -69,4 +88,5 @@ class StudentController extends Controller
 
         return response()->json($response,200);
     }
+    
 }

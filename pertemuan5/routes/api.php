@@ -10,6 +10,7 @@ Route::get('/user', function (Request $request) {
 
 
 Route::get('/students', [StudentController::class,'index'])->name('ShowStudents');
+Route::get('/students/{id}', [StudentController::class,'detail'])->name('DetailStudents');
 Route::post('/students', [StudentController::class, 'store'])->name('AddStudents');
 Route::put('/students/{id}', [StudentController::class, 'update'])->name('UpdateStudents');
 Route::delete('/students/{id}', [StudentController::class, 'delete'])->name('DeleteStudents');
