@@ -47,7 +47,7 @@ const store = (name) => {
  */
 const update = (position, name) => {
     fruits[position] = name
-    index()
+    index()    
 }
 
 /**
