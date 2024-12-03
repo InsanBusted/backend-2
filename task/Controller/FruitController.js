@@ -33,7 +33,7 @@ const index = () => {
  */
 const store = (name) => {
     fruits.push(name)
-    fruits.forEach(fruit => {console.log(fruit)})
+    index()
 }
 
 /**
@@ -47,7 +47,7 @@ const store = (name) => {
  */
 const update = (position, name) => {
     fruits[position] = name
-    fruits.forEach(fruit => {console.log(fruit)})
+    index()
 }
 
 /**
@@ -62,7 +62,7 @@ const update = (position, name) => {
  */
 const destroy = (position) => {
     fruits.splice(position, 1)
-    fruits.forEach(fruit => {console.log(fruit)})
+    index()
 }
 
 /**
