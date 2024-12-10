@@ -6,7 +6,8 @@
  * @hint - Gunakan Destructing Object
  */
 
-const { index, store, update, destroy } = require('./Controller/FruitController')
+import { index, store, update, destroy } from './Controller/FruitController.js';
+
 
 /**
  * NOTES:

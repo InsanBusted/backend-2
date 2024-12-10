@@ -6,8 +6,7 @@ use Illuminate\Http\Request;
 
 class AnimalsController extends Controller
 {
-    private $animals = ['ikan', 'singa'];
-
+    public $animals = ['ikan', 'singa'];
     public function index()
     {
         return response()->json([

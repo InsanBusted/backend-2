@@ -3,7 +3,9 @@
  * - import fruits dari data/fruits.js
  * - refactor variabel ke ES6 variable
  */
-const fruits = require('../data/fruits');
+
+import fruits from "../data/fruits.js";
+
 
 /**
  * TODO 4:
@@ -47,7 +49,7 @@ const store = (name) => {
  */
 const update = (position, name) => {
     fruits[position] = name
-    index()    
+    index()                                 
 }
 
 /**
@@ -68,4 +70,4 @@ const destroy = (position) => {
 /**
  * TODO 8: export method index, store, update, dan destroy
  */
-module.exports = {index,store,update,destroy};
+export { index, store, update, destroy };

@@ -6,4 +6,4 @@
 const fruits = ["Apel", "Semangka", "Jeruk"]
 
 // TODO 2: export variable fruits
-module.exports = fruits;
+export default fruits
